@@ -1,0 +1,29 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "react",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srikanthgithub2/reactdev.git"
+  },
+  "keywords": [],
+  "author": "srikanth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srikanthgithub2/reactdev/issues"
+  },
+  "homepage": "https://github.com/srikanthgithub2/reactdev#readme",
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "browserslist":[
+    "last 2 versions"
+  ]
+}
