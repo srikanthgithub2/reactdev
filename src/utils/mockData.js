@@ -1,42 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 
-/**
- * 
- * header
- * body
- * footer
- * 
- * 
- * 
- * 
- * 
- */
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src="https://static.vecteezy.com/system/resources/previews/047/709/642/non_2x/abstract-logo-design-for-any-corporate-brand-business-company-vector.jpg"></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li> 
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
-
-const stylecard = {
-  backgroundColor:"#f0f0f0",
-}
-
-
-const restaurantList = [
+export const restaurantList = [
   {
   "card": {
     "card": {
@@ -905,45 +868,3 @@ const restaurantList = [
   }
 }
 ];
-
-const RestaurantCard = (props) => {
-  const {restaurantData}=props;
-  console.log(restaurantData.card.card.info.name);
-  return (
-    <div className="restaurant-card" style={stylecard}>
-        <img className="restaurant-img" 
-        src={
-        "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + 
-        restaurantData.card.card.info.cloudinaryImageId}></img>
-      <h3>{restaurantData.card.card.info.name}</h3>
-      <h4>{restaurantData.card.card.info.cuisines.join(",")}</h4>
-      <h4>{restaurantData.card.card.info.avgRating} stars</h4>
-      <h4>{restaurantData.card.card.info.costForTwo}</h4>
-    </div>
-  )
-}
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">
-        search Food here
-      </div>
-      <div className="restaurant-list">
-         { restaurantList.map((restaurant) => (
-            <RestaurantCard key={restaurant.card.card.info.id} restaurantData={restaurant}/>
-          ))}
-      </div>
-      
-    </div>
-  )
-}
-
-const AppLayout = () => {
-  return <div className="app">
-    <Header />
-    <Body/>
-  </div>;
-}
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>);
