@@ -1,5 +1,5 @@
 
-export const restaurantList = [
+const restaurantList = [
   {
   "card": {
     "card": {
@@ -868,3 +868,5 @@ export const restaurantList = [
   }
 }
 ];
+
+export default restaurantList;
