@@ -43,7 +43,11 @@
 .restaurant-list{
     display: flex;
     flex-wrap: wrap;
-
+    text-decoration: none;
+}
+.res-link{
+    text-decoration: none;
+    color: black;
 }
 .filter-btn{
     padding: 10px;
